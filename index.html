@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLAUDIA Dental Sanctuary | Klinik Dokter Gigi Butik & Estetika Senyum</title>
+  <meta name="description" content="Klinik dokter gigi spesialis terkemuka di Jakarta Selatan. Menyediakan perawatan behel Invisalign, porcelain veneer, implan gigi digital, dan dokter gigi anak ramah dalam suasana mewah dan bebas trauma.">
+  <meta name="keywords" content="klinik dokter gigi jakarta, dokter gigi spesialis, invisalign jakarta, veneer gigi, dokter gigi anak, implan gigi, pemutihan gigi, orthodontist jakarta selatan">
+  
+  <!-- Favicon Monogram -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23183B2B'/%3E%3Cpath d='M20 9C15 9 11 13 11 18C11 22 13 25 15 28C16 29.5 17 31 17.5 32C18 33 18.5 33 19 32C19.5 30.5 20 28 20 26C20 28 20.5 30.5 21 32C21.5 33 22 33 22.5 32C23 31 24 29.5 25 28C27 25 29 22 29 18C29 13 25 9 20 9Z' fill='%23FAF8F5'/%3E%3C/svg%3E">
+
+  <!-- Core CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       TOP HEADER & DESKTOP NAVIGATION
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-container">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Claudia Dental Sanctuary Home">
+        <div class="brand-logo-mark">
+          <!-- Tooth / Elegant Smile Monogram SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.5 2 6 5 6 9c0 3.5 1.5 6 3 9 .8 1.5 1.5 3 2 4 .5.8 1 .8 1.5 0 .5-1 1.2-2.5 2-4 1.5-3 3-5.5 3-9 0-4-2.5-7-5.5-7z"/>
+            <path d="M9 12c1.5 1.5 4.5 1.5 6 0"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-logo-title">CLAUDIA</span>
+          <span class="brand-logo-subtitle">Dental & Smile Sanctuary</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="medical-professionals.html" class="nav-link">
+              Dental Specialists
+              <svg class="nav-arrow" viewBox="0 0 10 6" fill="currentColor">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="medical-professionals.html" class="dropdown-link">Semua Dokter Gigi Spesialis</a></li>
+              <li><a href="schedule-board.html" class="dropdown-link">Schedule Board (Jadwal Praktek)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="our-services.html" class="nav-link">
+              Treatments & Services
+              <svg class="nav-arrow" viewBox="0 0 10 6" fill="currentColor">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="our-services.html#ortho" class="dropdown-link">Invisalign & Orthodontics</a></li>
+              <li><a href="our-services.html#aesthetic" class="dropdown-link">Porcelain Veneers & Smile Makeover</a></li>
+              <li><a href="our-services.html#pediatric" class="dropdown-link">Dokter Gigi Anak (Pediatric Dentistry)</a></li>
+              <li><a href="our-services.html#implant" class="dropdown-link">Dental Implants & Bedah Mulut</a></li>
+              <li><a href="our-services.html#endodontic" class="dropdown-link">Perawatan Saluran Akar Mikroskopis</a></li>
+              <li><a href="our-services.html#whitening" class="dropdown-link">Laser Whitening & Scaling Gigi</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="our-facilities.html" class="nav-link">Our Facilities</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact-us.html" class="nav-link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Search Trigger Button -->
+        <button type="button" class="btn-search-trigger trigger-search" aria-label="Open Search">
+          <span>Search</span>
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="7" cy="7" r="5"/>
+            <path d="M11 11L15 15"/>
+          </svg>
+        </button>
+
+        <!-- Appointment Button (Opens View-Only Flow) -->
+        <button type="button" class="btn-appointment trigger-appointment">
+          Appointment
+        </button>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="btn-mobile-toggle" aria-label="Open Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO BANNER SECTION (CINEMATIC DENTAL SPA EXPERIENCE)
+       ======================================================================== -->
+  <section class="hero-section" aria-label="Hero Showcase">
+    <div class="hero-media-wrapper">
+      <!-- High-Fidelity Aesthetic Dental Sanctuary Visual -->
+      <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2000&auto=format&fit=crop" 
+           alt="Klinik Dokter Gigi Modern Claudia Dental Sanctuary" 
+           class="hero-bg-visual" 
+           loading="eager">
+
+      <div class="hero-overlay-gradient"></div>
+
+      <div class="container" style="position:relative; z-index:5;">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            <span>A Gentle Boutique Dental Sanctuary</span>
+          </div>
+
+          <h1 class="hero-title">
+            Crafting Confident Smiles with Painless Artistry.
+          </h1>
+
+          <p class="hero-subtitle">
+            Rasakan standar baru perawatan gigi butik. Bebas rasa cemas, tanpa trauma, dengan presisi teknologi digital 3D dan sentuhan dokter gigi spesialis terkemuka di Jakarta.
+          </p>
+
+          <div class="hero-actions">
+            <button type="button" class="btn-appointment-hero trigger-appointment">
+              Book Dental Consultation Preview
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </button>
+            <a href="medical-professionals.html" class="btn-hero-secondary">
+              Temui Dokter Gigi Spesialis
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Simulated Ambiance Audio Toggle (Signature JWCC Feature) -->
+      <button type="button" class="hero-sound-control" id="heroSoundToggle" title="Toggle Sanctuary Relaxing Ambiance">
+        <svg class="sound-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <span class="sound-label">Mute Ambiance</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EDITORIAL PHILOSOPHY & CRAFTSMANSHIP STATEMENT
+       ======================================================================== -->
+  <section class="philosophy-section">
+    <div class="container">
+      
+      <div class="philosophy-banner-lead">
+        <h2 class="philosophy-quote">
+          "Merawat setiap senyuman dengan <span>kelembutan seni, presisi mikroskopis</span>, dan kenyamanan tanpa rasa sakit."
+        </h2>
+      </div>
+
+      <div class="philosophy-grid">
+        <!-- Left Frame Art Column -->
+        <div class="philosophy-illustration-col">
+          <div class="philosophy-art-frame">
+            <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop" 
+                 alt="Dokter Gigi Melayani Pasien dengan Lembut" 
+                 loading="lazy">
+          </div>
+          <div class="philosophy-botanical-tag">
+            <span>Painless & Anxiety-Free Care</span>
+          </div>
+        </div>
+
+        <!-- Right Editorial Column -->
+        <div class="philosophy-text-col">
+          <p>
+            CLAUDIA Dental Sanctuary hadir untuk mengubah pengalaman ke dokter gigi menjadi momen relaksasi yang dinantikan. Kami menghapus stigma suara bor yang menakutkan dan bau klinik yang kaku dengan pendekatan <em>dental spa</em> modern.
+          </p>
+
+          <p>
+            Setiap tindakan ditangani langsung oleh dokter gigi spesialis (Ortodontis, Prostodonsis, Konservasi Gigi, Pediatri, dan Bedah Mulut) menggunakan anestesi komputerisasi bebas rasa sakit serta peredam bising audio nirkabel berteknologi tinggi.
+          </p>
+
+          <h3 class="philosophy-heading-large">
+            Your Confident Smile. <br>
+            <em>Our Sacred Craft.</em>
+          </h3>
+
+          <div style="margin-top: 1rem;">
+            <a href="about.html" class="pillar-cta">
+              Pelajari Filosofi Kami
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       THREE CORE PILLARS ENTRY CARDS (DENTAL DOMAIN)
+       ======================================================================== -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="pillars-grid">
+        
+        <!-- Pillar 1: Dental Specialists -->
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" 
+                 alt="Dokter Gigi Spesialis Claudia Dental" 
+                 loading="lazy">
+            <span class="pillar-tag">Expert Specialists</span>
+          </div>
+          <div class="pillar-body">
+            <h3 class="pillar-title">Our Dental Specialists</h3>
+            <p class="pillar-description">
+              Didukung oleh para dokter gigi spesialis lulusan universitas terkemuka dan bersertifikasi internasional (Invisalign Diamond, ITI Fellow, Mikroskopis Endodonti).
+            </p>
+            <a href="medical-professionals.html" class="pillar-cta">
+              Temukan Dokter Gigi
+            </a>
+          </div>
+        </article>
+
+        <!-- Pillar 2: Clinical Services -->
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop" 
+                 alt="Perawatan Gigi Butik dan Estetika" 
+                 loading="lazy">
+            <span class="pillar-tag">Advanced Treatments</span>
+          </div>
+          <div class="pillar-body">
+            <h3 class="pillar-title">Our Dental Services</h3>
+            <p class="pillar-description">
+              Solusi gigi komprehensif mulai dari Invisalign, Porcelain Veneer ultra-tipis, Implan Gigi Digital 3D CBCT, hingga perawatan ramah anak tanpa rasa takut.
+            </p>
+            <a href="our-services.html" class="pillar-cta">
+              Lihat Semua Perawatan
+            </a>
+          </div>
+        </article>
+
+        <!-- Pillar 3: World-Class Facilities -->
+        <article class="pillar-card">
+          <div class="pillar-media">
+            <img src="https://images.unsplash.com/photo-1629909615184-74f495363b67?q=80&w=800&auto=format&fit=crop" 
+                 alt="Fasilitas Kamar Perawatan Gigi Butik" 
+                 loading="lazy">
+            <span class="pillar-tag">Boutique Suites</span>
+          </div>
+          <div class="pillar-body">
+            <h3 class="pillar-title">Our Boutique Facilities</h3>
+            <p class="pillar-description">
+              Kamar perawatan VIP privat dengan kursi ergonomis berpemanas, headset peredam suara, pemindai intraoral 3D tanpa cetak pasta, dan sterilisasi standar rumah sakit internasional.
+            </p>
+            <a href="our-facilities.html" class="pillar-cta">
+              Lihat Fasilitas Klinik
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LIFESTYLE & ARCHITECTURAL COLLABORATION (DENTAL SANCTUARY)
+       ======================================================================== -->
+  <section class="lifestyle-section">
+    <div class="container">
+      <div class="lifestyle-header">
+        <h2 class="lifestyle-title">
+          Going Beyond Conventional Dental Care. <br>
+          <em>A Serene Sensory Sanctuary</em> dirancang khusus untuk kenyamanan Anda.
+        </h2>
+        <p class="lifestyle-caption">Menghadirkan harmoni senyum dan relaksasi berkolaborasi dengan:</p>
+      </div>
+
+      <div class="lifestyle-collaborators">
+        <span class="collaborator-pill">Andra Matin Architectural Studio</span>
+        <span class="collaborator-pill">Swiss Digital Smile Design Labs</span>
+        <span class="collaborator-pill">Aromatherapy Sensory Lounge</span>
+        <span class="collaborator-pill">Painless Pediatric Dental Care</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TESTIMONIALS CAROUSEL SECTION (VERIFIED PATIENTS & PUBLIC FIGURES)
+       ======================================================================== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 2.5rem;">
+        <span class="section-label">Cerita Nyata Pasien Kami</span>
+        <h2 style="font-family:var(--font-serif); font-size:2.2rem; color:var(--color-accent); font-weight:600;">
+          Senyuman Indah & Pengalaman Bebas Rasa Sakit
+        </h2>
+      </div>
+
+      <div class="testimonial-card-container">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide active" data-index="0">
+          <div class="testimonial-avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=600&auto=format&fit=crop" 
+                 alt="Testimoni Pasien Invisalign Nycta Gina" 
+                 class="testimonial-avatar">
+          </div>
+          <div class="testimonial-quote-body">
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-quote-text">
+              "Dulu paling takut ke dokter gigi apalagi bawa anak-anak. Di CLAUDIA suasananya kayak di resort atau lounge hotel bintang lima, wangi aromaterapi dan sama sekali gak bau rumah sakit. Dokter giginya super sabar dan telaten. Perawatan behel transparan Invisalign-ku berjalan lancar dan hasilnya sangat rapi!"
+            </p>
+            <h4 class="testimonial-author">Nycta Gina</h4>
+            <span class="testimonial-role">Pasien Invisalign & Ibu Dua Anak</span>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="testimonial-slide" data-index="1">
+          <div class="testimonial-avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
+                 alt="Testimoni Porcelain Veneer Yasmine Wildblood" 
+                 class="testimonial-avatar">
+          </div>
+          <div class="testimonial-quote-body">
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-quote-text">
+              "Hasil Porcelain Veneer dari drg. Darrell Fernando di CLAUDIA sangat luar biasa natural! Warnanya menyatu dengan bentuk wajahku, tidak terlalu putih mencolok tapi tetap cerah elegan. Selama proses pengerjaan sambil dengerin musik pakai noise-cancelling headphones sampai ketiduran. Best dental clinic in Jakarta!"
+            </p>
+            <h4 class="testimonial-author">Yasmine Wildblood</h4>
+            <span class="testimonial-role">Pasien Smile Makeover & Public Figure</span>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="testimonial-slide" data-index="2">
+          <div class="testimonial-avatar-wrapper">
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=600&auto=format&fit=crop" 
+                 alt="Testimoni Dokter Gigi Anak Florencia Chua" 
+                 class="testimonial-avatar">
+          </div>
+          <div class="testimonial-quote-body">
+            <div class="testimonial-quote-icon">“</div>
+            <p class="testimonial-quote-text">
+              "Anak saya biasanya trauma dan nangis histeris kalau ke dokter gigi. Tapi di CLAUDIA, drg. Agnes punya trik sulap dan dongeng yang bikin anak saya anteng banget waktu ditambal. Ruang bermainnya juga lengkap dan bersih. Benar-benar penyelamat bagi para ibu!"
+            </p>
+            <h4 class="testimonial-author">Florencia Chua</h4>
+            <span class="testimonial-role">Ibu Pasien Gigi Anak</span>
+          </div>
+        </div>
+
+        <!-- Slide Controls -->
+        <div class="carousel-controls">
+          <button type="button" class="carousel-btn" id="testiPrev" aria-label="Previous Testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M15 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button type="button" class="carousel-btn" id="testiNext" aria-label="Next Testimonial">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M9 5l7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SCHEDULE BOARD QUICK PREVIEW CALLOUT
+       ======================================================================== -->
+  <section style="padding: 4rem 0; background-color: var(--color-primary); color: #fff; text-align: center;">
+    <div class="container" style="max-width: 800px;">
+      <h2 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 600; margin-bottom: 1rem;">
+        Cari Jam Praktek Dokter Gigi Spesialis?
+      </h2>
+      <p style="font-size: 1.05rem; color: #D5E5DC; margin-bottom: 2rem; line-height: 1.7;">
+        Lihat papan jadwal interaktif untuk memeriksa ketersediaan dokter gigi spesialis Ortodonti, Gigi Anak, Konservasi, Prostodonsia, dan Bedah Mulut minggu ini.
+      </p>
+      <a href="schedule-board.html" class="btn-hero-secondary" style="background:#fff; color:var(--color-primary); font-weight:700; border:none;">
+        Buka Schedule Board Dokter Gigi
+      </a>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Col 1: Brand & Location -->
+        <div class="footer-brand-col">
+          <div class="brand-logo" style="margin-bottom: 0.5rem;">
+            <div class="brand-logo-mark">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.5 2 6 5 6 9c0 3.5 1.5 6 3 9 .8 1.5 1.5 3 2 4 .5.8 1 .8 1.5 0 .5-1 1.2-2.5 2-4 1.5-3 3-5.5 3-9 0-4-2.5-7-5.5-7z"/>
+                <path d="M9 12c1.5 1.5 4.5 1.5 6 0"/>
+              </svg>
+            </div>
+            <div class="brand-logo-text">
+              <span class="brand-logo-title">CLAUDIA</span>
+              <span class="brand-logo-subtitle">Dental & Smile Sanctuary</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Jl. Panglima Polim III No. 34<br>
+            Kebayoran Baru, Jakarta Selatan 12160<br>
+            DKI Jakarta, Indonesia
+          </p>
+          <div style="font-size:0.75rem; color:var(--color-accent); font-weight:700; letter-spacing:0.06em; text-transform:uppercase;">
+            Akreditasi Fasilitas Pelayanan Gigi Paripurna
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Sanctuary Menu</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html" class="footer-link">Tentang Klinik Kami</a></li>
+            <li><a href="medical-professionals.html" class="footer-link">Dokter Gigi Spesialis</a></li>
+            <li><a href="schedule-board.html" class="footer-link">Jadwal Praktek Mingguan</a></li>
+            <li><a href="our-services.html" class="footer-link">Perawatan Gigi & Estetika</a></li>
+            <li><a href="our-facilities.html" class="footer-link">Kamar VIP & Fasilitas 3D</a></li>
+            <li><a href="contact-us.html" class="footer-link">Kontak & Lokasi Klinik</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Care Services -->
+        <div>
+          <h4 class="footer-col-title">Perawatan Unggulan</h4>
+          <ul class="footer-links-list">
+            <li><a href="our-services.html#ortho" class="footer-link">Invisalign & Behel Transparan</a></li>
+            <li><a href="our-services.html#aesthetic" class="footer-link">Porcelain Veneers & Smile Design</a></li>
+            <li><a href="our-services.html#pediatric" class="footer-link">Dokter Gigi Anak Bebas Trauma</a></li>
+            <li><a href="our-services.html#implant" class="footer-link">Implan Gigi Terpandu 3D</a></li>
+            <li><a href="our-services.html#endodontic" class="footer-link">Perawatan Saluran Akar</a></li>
+            <li><a href="our-services.html#whitening" class="footer-link">Laser Teeth Whitening</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Social Channels -->
+        <div>
+          <h4 class="footer-col-title">Emergency & Concierge</h4>
+          <div class="footer-contact-block">
+            
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-text-title">Hotline Sakit Gigi Darurat</span>
+                <p class="footer-contact-text-value">(+62) 21 7279 9911</p>
+              </div>
+            </div>
+
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-text-title">WhatsApp Janji Temu</span>
+                <p class="footer-contact-text-value">(+62) 811 1399 119</p>
+              </div>
+            </div>
+
+            <div class="footer-contact-row">
+              <div class="footer-contact-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+              </div>
+              <div>
+                <span class="footer-contact-text-title">Instagram</span>
+                <p class="footer-contact-text-value">@claudia.dentalsanctuary</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Legal Notice -->
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 CLAUDIA Dental Sanctuary. All rights reserved. Benchmark desain berbasis standar luxury The JWCC.</p>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#" style="text-decoration:underline;">Kebijakan Privasi</a>
+          <a href="#" style="text-decoration:underline;">Standar Sterilisasi</a>
+          <a href="#" style="text-decoration:underline;">Hak Pasien</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       MOBILE FLOATING BOTTOM BAR (SIGNATURE JWCC MOBILE EXPERIENCE)
+       ======================================================================== -->
+  <aside class="mobile-bottom-bar" aria-label="Mobile Navigation Controls">
+    <div class="mobile-bottom-grid">
+      <button type="button" class="mobile-bottom-btn" id="bottomMenuTrigger">
+        <svg width="16" height="6" fill="currentColor">
+          <path d="M0 1h16M0 5h16" stroke="currentColor" stroke-width="1.8"/>
+        </svg>
+        <span>MENU</span>
+      </button>
+
+      <button type="button" class="mobile-bottom-btn trigger-search" title="Search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="11" cy="11" r="8"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+
+      <button type="button" class="mobile-bottom-btn trigger-appointment" style="background-color:var(--color-primary); color:#fff;">
+        <span>APPOINTMENT</span>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       MOBILE OFF-CANVAS DRAWER MENU
+       ======================================================================== -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <span class="brand-logo-title" style="font-size:1.15rem;">CLAUDIA</span>
+        </div>
+        <button type="button" class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="mobile-drawer-body">
+        <ul class="mobile-nav-list">
+          <li><a href="about.html" class="mobile-nav-link">About Us & Filosofi</a></li>
+          <li><a href="medical-professionals.html" class="mobile-nav-link">Dokter Gigi Spesialis</a></li>
+          <li><a href="schedule-board.html" class="mobile-nav-link">Schedule Board (Jadwal)</a></li>
+          <li><a href="our-services.html" class="mobile-nav-link">Perawatan & Layanan</a></li>
+          <li><a href="our-facilities.html" class="mobile-nav-link">Fasilitas & Kamar VIP</a></li>
+          <li><a href="contact-us.html" class="mobile-nav-link">Kontak & Lokasi</a></li>
+        </ul>
+
+        <div class="mobile-contact-block">
+          <div class="mobile-contact-item">
+            <div class="mobile-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <small style="font-weight:700; text-transform:uppercase;">Hotline Darurat Gigi</small>
+              <div style="font-size:0.9rem; font-weight:600;">(+62) 21 7279 9911</div>
+            </div>
+          </div>
+
+          <div class="mobile-contact-item">
+            <div class="mobile-contact-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+              </svg>
+            </div>
+            <div>
+              <small style="font-weight:700; text-transform:uppercase;">WhatsApp Care</small>
+              <div style="font-size:0.9rem; font-weight:600;">(+62) 811 1399 119</div>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-appointment trigger-appointment" style="width:100%; margin-top:1.5rem; padding:0.9rem; text-align:center;">
+          Book Dental Appointment
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 1: SEARCH OVERLAY
+       ======================================================================== -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-card" style="max-width:560px;">
+      <button type="button" class="modal-close-btn" id="closeSearchModal">&times;</button>
+      <div class="modal-header">
+        <h3 class="modal-header-title">Cari Layanan & Dokter Gigi</h3>
+        <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Cari dokter spesialis, perawatan gigi, atau fasilitas...</p>
+      </div>
+      <div class="modal-body">
+        <input type="text" 
+               class="form-control" 
+               id="siteSearchInput" 
+               placeholder="Ketik e.g., 'Invisalign', 'Veneer', 'Claudia', 'Implan', 'Gigi Anak'..." 
+               style="font-size:1rem; padding:1rem 1.25rem; border-radius:var(--radius-full); margin-bottom:1.25rem;">
+        
+        <div id="searchResultsPreview">
+          <p class="text-muted" style="font-size:0.85rem; padding:1rem 0;">Ketik kata kunci untuk melihat pratinjau hasil pencarian...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: DENTAL APPOINTMENT WIZARD (VIEW-ONLY DEMO)
+       ======================================================================== -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="closeAppointmentModal">&times;</button>
+      
+      <div class="modal-header">
+        <span class="section-label">Online Dental Concierge</span>
+        <h3 class="modal-header-title">Jadwalkan Konsultasi Gigi</h3>
+      </div>
+
+      <div class="modal-body">
+        
+        <div class="demo-view-notice">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="16" x2="12" y2="12"/>
+            <line x1="12" y1="8" x2="12.01" y2="8"/>
+          </svg>
+          <span><strong>Simulasi Interaktif View-Only:</strong> Pada website produksi, form ini terhubung langsung ke WhatsApp Concierge & Sistem Manajemen Pasien Klinik.</span>
+        </div>
+
+        <div id="wizardBody">
+          <!-- Wizard Step Indicator -->
+          <div class="booking-steps-nav">
+            <div class="step-indicator active" data-step="1">1</div>
+            <div class="step-indicator" data-step="2">2</div>
+            <div class="step-indicator" data-step="3">3</div>
+            <div class="step-indicator" data-step="4">4</div>
+          </div>
+
+          <!-- Step 1: Layanan Gigi -->
+          <div class="booking-step-panel" id="step1Panel">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">1. Pilih Jenis Perawatan Gigi</h4>
+            <div class="form-group">
+              <label class="form-label">Kategori Perawatan</label>
+              <select class="filter-select" id="wizardSpecialtySelect">
+                <option value="ortho">Invisalign & Behel Gigi (Spesialis Ortodonti)</option>
+                <option value="veneer">Porcelain Veneer & Smile Design (Estetika Gigi)</option>
+                <option value="pediatric">Pemeriksaan Gigi Anak Bebas Trauma (Spesialis KGA)</option>
+                <option value="implant">Implan Gigi & Cabut Gigi Bungsu (Bedah Mulut)</option>
+                <option value="rootcanal">Perawatan Saluran Akar & Tambal Estetik (Konservasi Gigi)</option>
+                <option value="scaling">Pembersihan Karang Gigi (Scaling) & Laser Whitening</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Tipe Kunjungan</label>
+              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
+                <label style="display:flex; align-items:center; gap:0.5rem; padding:0.75rem 1rem; border:1px solid var(--color-pastel-pill); border-radius:12px; cursor:pointer;">
+                  <input type="radio" name="consultType" checked> Kunjungan Langsung (Klinik)
+                </label>
+                <label style="display:flex; align-items:center; gap:0.5rem; padding:0.75rem 1rem; border:1px solid var(--color-pastel-pill); border-radius:12px; cursor:pointer;">
+                  <input type="radio" name="consultType"> Tele-Konsultasi Awal (Foto Gigi)
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Pilih Dokter Gigi Spesialis -->
+          <div class="booking-step-panel" id="step2Panel" style="display:none;">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">2. Pilih Dokter Gigi Spesialis</h4>
+            <div class="form-group">
+              <label class="form-label">Dokter Gigi yang Bertugas</label>
+              <select class="filter-select">
+                <option>Drg. Claudia Samantha, Sp.Ort (Ortodontis & Invisalign Provider)</option>
+                <option>Drg. Darrell Fernando, Sp.Pros (Prostodonsia & Smile Makeover Veneer)</option>
+                <option>Drg. Agnes, Sp.KGA (Dokter Gigi Anak / Pediatric Dentist)</option>
+                <option>Drg. Benny Johan, Sp.BM (Spesialis Bedah Mulut & Implan Gigi)</option>
+                <option>Drg. Budi Marjono, Sp.KG (Konservasi Gigi & Saluran Akar Mikroskopis)</option>
+                <option>Drg. Arnesya Ayu, Sp.Perio (Periodonsia & Kesehatan Gusi)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Sesi Konsultasi yang Diinginkan</label>
+              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem; background:var(--color-pastel-pill);">Pagi (09:00 - 12:00)</button>
+                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem;">Siang (13:00 - 17:00)</button>
+                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem;">Sore / Malam (17:30 - 20:30)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 3: Tanggal & Jam -->
+          <div class="booking-step-panel" id="step3Panel" style="display:none;">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">3. Pilih Tanggal & Slot Waktu</h4>
+            <div class="form-group">
+              <label class="form-label">Pilih Tanggal</label>
+              <input type="date" class="form-control" value="2026-10-15">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Slot Waktu Tersedia</label>
+              <select class="filter-select">
+                <option>10:00 WIB - Tersedia (Kamar VIP Operatory 1)</option>
+                <option>11:30 WIB - Tersedia (Kamar VIP Operatory 2)</option>
+                <option>14:00 WIB - Tersedia (Kamar VIP Operatory 1)</option>
+                <option>16:30 WIB - Tersedia (Kamar VIP Operatory 3)</option>
+                <option>18:30 WIB - Tersedia (Kamar VIP Operatory 2)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 4: Data Pasien -->
+          <div class="booking-step-panel" id="step4Panel" style="display:none;">
+            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">4. Konfirmasi Data Pasien (Review Mode)</h4>
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+              <div class="form-group">
+                <label class="form-label">Nama Lengkap Pasien</label>
+                <input type="text" class="form-control" placeholder="e.g., Claudia Samantha" value="Claudia Samantha">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nomor WhatsApp Aktif</label>
+                <input type="tel" class="form-control" placeholder="0812..." value="081298765432">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Keluhan Gigi / Catatan Perawatan (Opsional)</label>
+              <textarea class="form-control" rows="2" placeholder="Gigi geraham sensitif / Konsultasi pasang behel Invisalign / Sakit gigi berdenyut..."></textarea>
+            </div>
+          </div>
+
+          <!-- Wizard Action Navigation Buttons -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--bg-cream);">
+            <button type="button" class="btn-filter-clear" id="btnWizardPrev" style="display:none;">
+              &larr; Kembali
+            </button>
+            <div style="margin-left:auto;">
+              <button type="button" class="btn-filter-apply" id="btnWizardNext">
+                Lanjut &rarr;
+              </button>
+              <button type="button" class="btn-filter-apply" id="btnWizardFinish" style="display:none; background:var(--color-accent);">
+                Konfirmasi Simulasi Booking
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Success Simulated Box -->
+        <div id="appointmentSuccessBox" style="display:none; text-align:center; padding:2rem 1rem;">
+          <div style="width:64px; height:64px; background:var(--color-pastel-pill); color:var(--color-primary); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem;">
+            ✓
+          </div>
+          <h3 style="font-family:var(--font-serif); font-size:1.8rem; color:var(--color-primary); margin-bottom:0.75rem;">
+            Permintaan Reservasi Terkirim!
+          </h3>
+          <p style="font-size:0.95rem; color:var(--text-body); max-width:440px; margin:0 auto 1.5rem; line-height:1.7;">
+            Dalam sistem produksi langsung, notifikasi otomatis konfirmasi janji temu dokter gigi beserta panduan perawatan akan langsung terkirim ke WhatsApp pasien.
+          </p>
+          <button type="button" class="btn-filter-clear" onclick="document.getElementById('appointmentModal').classList.remove('open');">
+            Tutup Pratinjau
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

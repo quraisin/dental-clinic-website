@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule Board | CLAUDIA Dental Sanctuary</title>
+  <meta name="description" content="Papan jadwal praktek mingguan dokter gigi spesialis ortodonti, gigi anak, konservasi, prostodonsia, dan bedah mulut.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23183B2B'/%3E%3Cpath d='M20 9C15 9 11 13 11 18C11 22 13 25 15 28C16 29.5 17 31 17.5 32C18 33 18.5 33 19 32C19.5 30.5 20 28 20 26C20 28 20.5 30.5 21 32C21.5 33 22 33 22.5 32C23 31 24 29.5 25 28C27 25 29 22 29 18C29 13 25 9 20 9Z' fill='%23FAF8F5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Claudia Dental Sanctuary Home">
+        <div class="brand-logo-mark">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2C8.5 2 6 5 6 9c0 3.5 1.5 6 3 9 .8 1.5 1.5 3 2 4 .5.8 1 .8 1.5 0 .5-1 1.2-2.5 2-4 1.5-3 3-5.5 3-9 0-4-2.5-7-5.5-7z"/>
+            <path d="M9 12c1.5 1.5 4.5 1.5 6 0"/>
+          </svg>
+        </div>
+        <div class="brand-logo-text">
+          <span class="brand-logo-title">CLAUDIA</span>
+          <span class="brand-logo-subtitle">Dental & Smile Sanctuary</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
+          <li class="nav-item">
+            <a href="medical-professionals.html" class="nav-link active">
+              Dental Specialists
+              <svg class="nav-arrow" viewBox="0 0 10 6" fill="currentColor"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <ul class="nav-dropdown">
+              <li><a href="medical-professionals.html" class="dropdown-link">Semua Dokter Gigi Spesialis</a></li>
+              <li><a href="schedule-board.html" class="dropdown-link active">Schedule Board (Jadwal Praktek)</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="our-services.html" class="nav-link">Treatments & Services</a></li>
+          <li class="nav-item"><a href="our-facilities.html" class="nav-link">Our Facilities</a></li>
+          <li class="nav-item"><a href="contact-us.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="btn-appointment trigger-appointment">Appointment</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div style="margin-bottom: 1rem;">
+        <a href="medical-professionals.html" style="display:inline-flex; align-items:center; gap:0.5rem; font-size:0.8rem; font-weight:700; color:var(--color-accent); text-transform:uppercase; letter-spacing:0.06em;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Kembali ke Direktori Dokter Gigi
+        </a>
+      </div>
+      
+      <div style="display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:1.5rem;">
+        <div>
+          <span class="section-label">Papan Jadwal Praktek Mingguan Live</span>
+          <h1 class="page-hero-title">Dental Schedule Board</h1>
+          <p class="page-hero-subtitle">
+            Pilih dokter gigi spesialis Anda dan periksa ketersediaan jam konsultasi dari hari Senin sampai Minggu.
+          </p>
+        </div>
+
+        <!-- Filter Controls on Board -->
+        <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+          <input type="text" id="scheduleSearchInput" class="filter-input" placeholder="Cari nama dokter gigi..." style="max-width:220px; background:#fff;">
+          <select id="scheduleDeptFilter" class="filter-select" style="max-width:260px; background-color:#fff;">
+            <option value="">Semua Divisi Spesialis</option>
+            <option value="Orthodontics">Ortodonti & Invisalign</option>
+            <option value="Prosthodontics">Prostodonsia & Veneer</option>
+            <option value="Pediatric">Dokter Gigi Anak</option>
+            <option value="Oral & Maxillofacial">Bedah Mulut & Implan</option>
+            <option value="Conservative">Konservasi Gigi & Saluran Akar</option>
+            <option value="Periodontology">Periodonsia & Gusi</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Schedule Table View (Dental Replica of JWCC) -->
+  <main class="container">
+    <div class="schedule-board-wrapper">
+      
+      <!-- Table Header -->
+      <div class="schedule-header-row">
+        <div class="schedule-header-cell">DOKTER GIGI SPESIALIS</div>
+        <div class="schedule-header-cell">SENIN</div>
+        <div class="schedule-header-cell">SELASA</div>
+        <div class="schedule-header-cell">RABU</div>
+        <div class="schedule-header-cell">KAMIS</div>
+        <div class="schedule-header-cell">JUMAT</div>
+        <div class="schedule-header-cell">SABTU</div>
+        <div class="schedule-header-cell">MINGGU</div>
+      </div>
+
+      <!-- Doctor Row 1: Drg. Claudia Samantha, Sp.Ort -->
+      <div class="schedule-row" data-name="Drg. Claudia Samantha" data-dept="Orthodontics">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Claudia Samantha, Sp.Ort</div>
+          <div class="schedule-doctor-dept">Spesialis Ortodonti & Invisalign</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge" style="background:#e4dcd3;">09:00 - 15:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+      </div>
+
+      <!-- Doctor Row 2: Drg. Darrell Fernando, Sp.Pros -->
+      <div class="schedule-row" data-name="Drg. Darrell Fernando" data-dept="Prosthodontics">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Darrell Fernando, Sp.Pros</div>
+          <div class="schedule-doctor-dept">Prostodonsia & Porcelain Veneer</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">11:00 - 19:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">11:00 - 19:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+      </div>
+
+      <!-- Doctor Row 3: Drg. Agnes, Sp.KGA -->
+      <div class="schedule-row" data-name="Drg. Agnes" data-dept="Pediatric">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Agnes, Sp.KGA</div>
+          <div class="schedule-doctor-dept">Dokter Gigi Anak (Pediatric)</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">09:00 - 14:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">09:00 - 14:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">09:00 - 14:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">09:00 - 14:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+      </div>
+
+      <!-- Doctor Row 4: Drg. Benny Johan, Sp.BM -->
+      <div class="schedule-row" data-name="Drg. Benny Johan" data-dept="Oral & Maxillofacial">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Benny Johan, Sp.BM</div>
+          <div class="schedule-doctor-dept">Bedah Mulut & Implan Gigi 3D</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">14:00 - 20:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">14:00 - 20:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge" style="background:#e4dcd3;">10:00 - 14:00</span>
+        </div>
+      </div>
+
+      <!-- Doctor Row 5: Drg. Budi Marjono, Sp.KG -->
+      <div class="schedule-row" data-name="Drg. Budi Marjono" data-dept="Conservative">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Budi Marjono, Sp.KG</div>
+          <div class="schedule-doctor-dept">Konservasi & Saluran Akar</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">13:00 - 18:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+      </div>
+
+      <!-- Doctor Row 6: Drg. Arnesya Ayu, Sp.Perio -->
+      <div class="schedule-row" data-name="Drg. Arnesya Ayu" data-dept="Periodontology">
+        <div class="schedule-doctor-cell">
+          <div class="schedule-doctor-name">Drg. Arnesya Ayu, Sp.Perio</div>
+          <div class="schedule-doctor-dept">Periodonsia & Estetika Gusi</div>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 16:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 16:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-badge">10:00 - 16:00</span>
+        </div>
+        <div class="schedule-time-cell">
+          <span class="time-slot-empty">-</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Emergency Dental Note -->
+    <div style="background:#fff; border-radius:18px; padding:1.75rem; box-shadow:var(--shadow-subtle); margin-bottom:5rem; display:flex; align-items:center; gap:1.25rem;">
+      <div style="width:48px; height:48px; border-radius:50%; background:var(--color-pastel-pill); color:var(--color-primary); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+      </div>
+      <div>
+        <h4 style="font-family:var(--font-serif); font-size:1.1rem; color:var(--color-primary); margin-bottom:0.25rem;">
+          Layanan Sakit Gigi Akut & Trauma Gigi Darurat
+        </h4>
+        <p style="font-size:0.88rem; color:var(--text-body); margin:0;">
+          Klinik kami siap melayani penanganan darurat sakit gigi berdenyut, gigi patah, atau pendarahan gusi. Hubungi hotline darurat kami: <strong>(+62) 21 7279 9911</strong>.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom-bar">
+        <p>&copy; 2026 CLAUDIA Dental Sanctuary. Papan Jadwal Praktek Mingguan.</p>
+        <a href="index.html" style="font-weight:700; color:var(--color-primary);">&larr; Kembali ke Beranda Utama</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
