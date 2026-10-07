@@ -90,10 +90,10 @@
           </svg>
         </button>
 
-        <!-- Appointment Button (Opens View-Only Flow) -->
-        <button type="button" class="btn-appointment trigger-appointment">
+        <!-- Appointment Button -->
+        <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="btn-appointment">
           Appointment
-        </button>
+        </a>
 
         <!-- Mobile Hamburger Toggle -->
         <button type="button" class="btn-mobile-toggle" aria-label="Open Menu">
@@ -135,12 +135,12 @@
           </p>
 
           <div class="hero-actions">
-            <button type="button" class="btn-appointment-hero trigger-appointment">
-              Book Dental Consultation Preview
+            <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="btn-appointment-hero">
+              Book Dental Consultation
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
-            </button>
+            </a>
             <a href="medical-professionals.html" class="btn-hero-secondary">
               Temui Dokter Gigi Spesialis
             </a>
@@ -537,9 +537,9 @@
         </svg>
       </button>
 
-      <button type="button" class="mobile-bottom-btn trigger-appointment" style="background-color:var(--color-primary); color:#fff;">
+      <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn" style="background-color:var(--color-primary); color:#fff;">
         <span>APPOINTMENT</span>
-      </button>
+      </a>
     </div>
   </aside>
 
@@ -552,7 +552,12 @@
         <div class="brand-logo">
           <span class="brand-logo-title" style="font-size:1.15rem;">CLAUDIA</span>
         </div>
-        <button type="button" class="mobile-drawer-close" aria-label="Close menu">&times;</button>
+        <button type="button" class="mobile-drawer-close" aria-label="Close menu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
       </div>
 
       <div class="mobile-drawer-body">
@@ -591,9 +596,9 @@
           </div>
         </div>
 
-        <button type="button" class="btn-appointment trigger-appointment" style="width:100%; margin-top:1.5rem; padding:0.9rem; text-align:center;">
+        <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="btn-appointment" style="width:100%; margin-top:1.5rem; padding:0.9rem; text-align:center;">
           Book Dental Appointment
-        </button>
+        </a>
       </div>
     </div>
   </div>
@@ -603,7 +608,12 @@
        ======================================================================== -->
   <div class="modal-overlay" id="searchModal">
     <div class="modal-card" style="max-width:560px;">
-      <button type="button" class="modal-close-btn" id="closeSearchModal">&times;</button>
+      <button type="button" class="modal-close-btn" id="closeSearchModal" aria-label="Tutup Pencarian">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
       <div class="modal-header">
         <h3 class="modal-header-title">Cari Layanan & Dokter Gigi</h3>
         <p style="font-size:0.85rem; color:var(--text-muted); margin-top:0.3rem;">Cari dokter spesialis, perawatan gigi, atau fasilitas...</p>
@@ -618,164 +628,6 @@
         <div id="searchResultsPreview">
           <p class="text-muted" style="font-size:0.85rem; padding:1rem 0;">Ketik kata kunci untuk melihat pratinjau hasil pencarian...</p>
         </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ========================================================================
-       MODAL 2: DENTAL APPOINTMENT WIZARD (VIEW-ONLY DEMO)
-       ======================================================================== -->
-  <div class="modal-overlay" id="appointmentModal">
-    <div class="modal-card">
-      <button type="button" class="modal-close-btn" id="closeAppointmentModal">&times;</button>
-      
-      <div class="modal-header">
-        <span class="section-label">Online Dental Concierge</span>
-        <h3 class="modal-header-title">Jadwalkan Konsultasi Gigi</h3>
-      </div>
-
-      <div class="modal-body">
-        
-        <div class="demo-view-notice">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <line x1="12" y1="16" x2="12" y2="12"/>
-            <line x1="12" y1="8" x2="12.01" y2="8"/>
-          </svg>
-          <span><strong>Simulasi Interaktif View-Only:</strong> Pada website produksi, form ini terhubung langsung ke WhatsApp Concierge & Sistem Manajemen Pasien Klinik.</span>
-        </div>
-
-        <div id="wizardBody">
-          <!-- Wizard Step Indicator -->
-          <div class="booking-steps-nav">
-            <div class="step-indicator active" data-step="1">1</div>
-            <div class="step-indicator" data-step="2">2</div>
-            <div class="step-indicator" data-step="3">3</div>
-            <div class="step-indicator" data-step="4">4</div>
-          </div>
-
-          <!-- Step 1: Layanan Gigi -->
-          <div class="booking-step-panel" id="step1Panel">
-            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">1. Pilih Jenis Perawatan Gigi</h4>
-            <div class="form-group">
-              <label class="form-label">Kategori Perawatan</label>
-              <select class="filter-select" id="wizardSpecialtySelect">
-                <option value="ortho">Invisalign & Behel Gigi (Spesialis Ortodonti)</option>
-                <option value="veneer">Porcelain Veneer & Smile Design (Estetika Gigi)</option>
-                <option value="pediatric">Pemeriksaan Gigi Anak Bebas Trauma (Spesialis KGA)</option>
-                <option value="implant">Implan Gigi & Cabut Gigi Bungsu (Bedah Mulut)</option>
-                <option value="rootcanal">Perawatan Saluran Akar & Tambal Estetik (Konservasi Gigi)</option>
-                <option value="scaling">Pembersihan Karang Gigi (Scaling) & Laser Whitening</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Tipe Kunjungan</label>
-              <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
-                <label style="display:flex; align-items:center; gap:0.5rem; padding:0.75rem 1rem; border:1px solid var(--color-pastel-pill); border-radius:12px; cursor:pointer;">
-                  <input type="radio" name="consultType" checked> Kunjungan Langsung (Klinik)
-                </label>
-                <label style="display:flex; align-items:center; gap:0.5rem; padding:0.75rem 1rem; border:1px solid var(--color-pastel-pill); border-radius:12px; cursor:pointer;">
-                  <input type="radio" name="consultType"> Tele-Konsultasi Awal (Foto Gigi)
-                </label>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 2: Pilih Dokter Gigi Spesialis -->
-          <div class="booking-step-panel" id="step2Panel" style="display:none;">
-            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">2. Pilih Dokter Gigi Spesialis</h4>
-            <div class="form-group">
-              <label class="form-label">Dokter Gigi yang Bertugas</label>
-              <select class="filter-select">
-                <option>Drg. Claudia Samantha, Sp.Ort (Ortodontis & Invisalign Provider)</option>
-                <option>Drg. Darrell Fernando, Sp.Pros (Prostodonsia & Smile Makeover Veneer)</option>
-                <option>Drg. Agnes, Sp.KGA (Dokter Gigi Anak / Pediatric Dentist)</option>
-                <option>Drg. Benny Johan, Sp.BM (Spesialis Bedah Mulut & Implan Gigi)</option>
-                <option>Drg. Budi Marjono, Sp.KG (Konservasi Gigi & Saluran Akar Mikroskopis)</option>
-                <option>Drg. Arnesya Ayu, Sp.Perio (Periodonsia & Kesehatan Gusi)</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Sesi Konsultasi yang Diinginkan</label>
-              <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem; background:var(--color-pastel-pill);">Pagi (09:00 - 12:00)</button>
-                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem;">Siang (13:00 - 17:00)</button>
-                <button type="button" class="collaborator-pill" style="font-size:0.75rem; padding:0.4rem 1rem;">Sore / Malam (17:30 - 20:30)</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Step 3: Tanggal & Jam -->
-          <div class="booking-step-panel" id="step3Panel" style="display:none;">
-            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">3. Pilih Tanggal & Slot Waktu</h4>
-            <div class="form-group">
-              <label class="form-label">Pilih Tanggal</label>
-              <input type="date" class="form-control" value="2026-10-15">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Slot Waktu Tersedia</label>
-              <select class="filter-select">
-                <option>10:00 WIB - Tersedia (Kamar VIP Operatory 1)</option>
-                <option>11:30 WIB - Tersedia (Kamar VIP Operatory 2)</option>
-                <option>14:00 WIB - Tersedia (Kamar VIP Operatory 1)</option>
-                <option>16:30 WIB - Tersedia (Kamar VIP Operatory 3)</option>
-                <option>18:30 WIB - Tersedia (Kamar VIP Operatory 2)</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Step 4: Data Pasien -->
-          <div class="booking-step-panel" id="step4Panel" style="display:none;">
-            <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--color-primary); margin-bottom:1rem;">4. Konfirmasi Data Pasien (Review Mode)</h4>
-            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
-              <div class="form-group">
-                <label class="form-label">Nama Lengkap Pasien</label>
-                <input type="text" class="form-control" placeholder="e.g., Claudia Samantha" value="Claudia Samantha">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Nomor WhatsApp Aktif</label>
-                <input type="tel" class="form-control" placeholder="0812..." value="081298765432">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Keluhan Gigi / Catatan Perawatan (Opsional)</label>
-              <textarea class="form-control" rows="2" placeholder="Gigi geraham sensitif / Konsultasi pasang behel Invisalign / Sakit gigi berdenyut..."></textarea>
-            </div>
-          </div>
-
-          <!-- Wizard Action Navigation Buttons -->
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:2rem; padding-top:1.5rem; border-top:1px solid var(--bg-cream);">
-            <button type="button" class="btn-filter-clear" id="btnWizardPrev" style="display:none;">
-              &larr; Kembali
-            </button>
-            <div style="margin-left:auto;">
-              <button type="button" class="btn-filter-apply" id="btnWizardNext">
-                Lanjut &rarr;
-              </button>
-              <button type="button" class="btn-filter-apply" id="btnWizardFinish" style="display:none; background:var(--color-accent);">
-                Konfirmasi Simulasi Booking
-              </button>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Success Simulated Box -->
-        <div id="appointmentSuccessBox" style="display:none; text-align:center; padding:2rem 1rem;">
-          <div style="width:64px; height:64px; background:var(--color-pastel-pill); color:var(--color-primary); border-radius:50%; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem; font-size:2rem;">
-            ✓
-          </div>
-          <h3 style="font-family:var(--font-serif); font-size:1.8rem; color:var(--color-primary); margin-bottom:0.75rem;">
-            Permintaan Reservasi Terkirim!
-          </h3>
-          <p style="font-size:0.95rem; color:var(--text-body); max-width:440px; margin:0 auto 1.5rem; line-height:1.7;">
-            Dalam sistem produksi langsung, notifikasi otomatis konfirmasi janji temu dokter gigi beserta panduan perawatan akan langsung terkirim ke WhatsApp pasien.
-          </p>
-          <button type="button" class="btn-filter-clear" onclick="document.getElementById('appointmentModal').classList.remove('open');">
-            Tutup Pratinjau
-          </button>
-        </div>
-
       </div>
     </div>
   </div>

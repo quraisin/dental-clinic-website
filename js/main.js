@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileDrawer();
   initTestimonialsCarousel();
   initSearchModal();
-  initAppointmentModal();
+  initExternalAppointmentRedirect();
   initDoctorFilters();
   initDoctorProfileModal();
   initScheduleBoard();
@@ -198,97 +198,28 @@ function initSearchModal() {
 }
 
 /* ==========================================================================
-   5. Interactive Dental Appointment Booking Walkthrough (View-Only Mode)
+   5. External Appointment Redirect Handler
+   Seluruh tombol Appointment di-redirect ke website / portal reservasi eksternal
    ========================================================================== */
-function initAppointmentModal() {
-  const modal = document.getElementById('appointmentModal');
+const EXTERNAL_APPOINTMENT_URL = 'https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi';
+
+function initExternalAppointmentRedirect() {
   const triggers = document.querySelectorAll('.trigger-appointment');
-  const closeBtn = document.getElementById('closeAppointmentModal');
+  triggers.forEach(trigger => {
+    // If it's already an <a> tag with an href, ensure target and rel are set
+    if (trigger.tagName === 'A' && trigger.getAttribute('href') && trigger.getAttribute('href') !== '#') {
+      if (!trigger.getAttribute('target')) trigger.setAttribute('target', '_blank');
+      if (!trigger.getAttribute('rel')) trigger.setAttribute('rel', 'noopener noreferrer');
+      return;
+    }
 
-  if (!modal) return;
-
-  const openModal = () => {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden';
-    resetWizard();
-  };
-
-  const closeModal = () => {
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-  };
-
-  triggers.forEach(t => t.addEventListener('click', openModal));
-  if (closeBtn) closeBtn.addEventListener('click', closeModal);
-
-  modal.addEventListener('click', (e) => {
-    if (e.target === modal) closeModal();
+    // For button or interactive elements, redirect on click
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetUrl = trigger.getAttribute('data-appointment-url') || EXTERNAL_APPOINTMENT_URL;
+      window.open(targetUrl, '_blank', 'noopener,noreferrer');
+    });
   });
-
-  // Step Wizard Logic
-  let currentStep = 1;
-  const totalSteps = 4;
-
-  const stepIndicators = modal.querySelectorAll('.step-indicator');
-  const stepPanels = modal.querySelectorAll('.booking-step-panel');
-  const nextBtn = document.getElementById('btnWizardNext');
-  const prevBtn = document.getElementById('btnWizardPrev');
-  const finishBtn = document.getElementById('btnWizardFinish');
-
-  function updateWizardUI() {
-    stepIndicators.forEach((ind, i) => {
-      const stepNum = i + 1;
-      ind.classList.remove('active', 'done');
-      if (stepNum === currentStep) ind.classList.add('active');
-      else if (stepNum < currentStep) ind.classList.add('done');
-    });
-
-    stepPanels.forEach((panel, i) => {
-      panel.style.display = (i + 1 === currentStep) ? 'block' : 'none';
-    });
-
-    if (prevBtn) prevBtn.style.display = currentStep > 1 ? 'inline-flex' : 'none';
-    if (nextBtn) nextBtn.style.display = currentStep < totalSteps ? 'inline-flex' : 'none';
-    if (finishBtn) finishBtn.style.display = currentStep === totalSteps ? 'inline-flex' : 'none';
-  }
-
-  function resetWizard() {
-    currentStep = 1;
-    updateWizardUI();
-    const successBox = document.getElementById('appointmentSuccessBox');
-    const wizardBody = document.getElementById('wizardBody');
-    if (successBox) successBox.style.display = 'none';
-    if (wizardBody) wizardBody.style.display = 'block';
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      if (currentStep < totalSteps) {
-        currentStep++;
-        updateWizardUI();
-      }
-    });
-  }
-
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      if (currentStep > 1) {
-        currentStep--;
-        updateWizardUI();
-      }
-    });
-  }
-
-  if (finishBtn) {
-    finishBtn.addEventListener('click', () => {
-      const successBox = document.getElementById('appointmentSuccessBox');
-      const wizardBody = document.getElementById('wizardBody');
-      if (successBox && wizardBody) {
-        wizardBody.style.display = 'none';
-        successBox.style.display = 'block';
-      }
-    });
-  }
 }
 
 /* ==========================================================================
@@ -418,6 +349,24 @@ function initDoctorProfileModal() {
       creds: ['Sp.Perio (Universitas Gadjah Mada)', 'Laser Periodontal Therapy Certification', 'IPERI (Ikatan Periodontologi Indonesia)'],
       schedule: 'Selasa, Kamis, Sabtu (10:00 - 16:00)',
       lang: 'Bahasa Indonesia, English'
+    },
+    'drg-faisal': {
+      name: 'Drg. Faisal Aditya, Sp.Ort',
+      role: 'Spesialis Ortodonti & Clear Aligner Specialist',
+      dept: 'Orthodontics & Facial Aesthetics',
+      bio: 'Fokus pada perawatan ortodonti modern dengan teknologi clear aligner 3D digital terencana, koreksi gigitan simetris, dan percepatan pergerakan gigi tanpa rasa sakit.',
+      creds: ['Sp.Ort (Universitas Indonesia)', 'Certified Clear Aligner Provider', 'Ikatan Ortodontis Indonesia (IKORTI)'],
+      schedule: 'Senin, Kamis (10:00 - 18:00) | Sabtu (09:00 - 15:00)',
+      lang: 'Bahasa Indonesia, English'
+    },
+    'drg-nadine': {
+      name: 'Drg. Nadine Aurelia, Sp.Pros',
+      role: 'Spesialis Prostodonsia & Smile Rehabilitation',
+      dept: 'Prosthodontics & Aesthetic Dentistry',
+      bio: 'Pakar restorasi estetika senyum, porcelain veneer ultra-presisi, dan rehabilitasi oklusi menyeluruh dengan pendekatan digital smile design (DSD).',
+      creds: ['Sp.Pros (Universitas Indonesia)', 'Digital Smile Design (DSD) Certified Master', 'IPROSI'],
+      schedule: 'Rabu, Jumat (11:00 - 19:00) | Minggu (10:00 - 15:00)',
+      lang: 'Bahasa Indonesia, English'
     }
   };
 
@@ -436,6 +385,11 @@ function initDoctorProfileModal() {
       const credsList = document.getElementById('docModalCreds');
       if (credsList) {
         credsList.innerHTML = doc.creds.map(c => `<li style="margin-bottom:0.4rem;">${c}</li>`).join('');
+      }
+
+      const bookingBtn = document.getElementById('docModalBookingBtn');
+      if (bookingBtn) {
+        bookingBtn.href = `https://wa.me/628111399119?text=${encodeURIComponent(`Halo CLAUDIA Dental Sanctuary, saya ingin membuat janji konsultasi dengan ${doc.name}`)}`;
       }
 
       modal.classList.add('open');
@@ -459,18 +413,24 @@ function initDoctorProfileModal() {
 }
 
 /* ==========================================================================
-   8. Schedule Board Filter Logic
+   8. Schedule Board Filter & Interactive Control Panel Logic
    ========================================================================== */
 function initScheduleBoard() {
   const deptFilter = document.getElementById('scheduleDeptFilter');
   const searchInput = document.getElementById('scheduleSearchInput');
+  const resetBtn = document.getElementById('btnScheduleReset');
   const rows = document.querySelectorAll('.schedule-row');
+  const doctorCountEl = document.getElementById('scheduleDoctorCount');
+  const slotCountEl = document.getElementById('scheduleSlotCount');
 
   if (!rows.length) return;
 
   function filterSchedule() {
     const dept = deptFilter ? deptFilter.value.toLowerCase() : '';
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+    let matchedDoctors = 0;
+    let matchedSlots = 0;
 
     rows.forEach(row => {
       const rowDept = (row.getAttribute('data-dept') || '').toLowerCase();
@@ -479,12 +439,32 @@ function initScheduleBoard() {
       const matchDept = !dept || rowDept.includes(dept);
       const matchQuery = !query || rowName.includes(query) || rowDept.includes(query);
 
-      row.style.display = (matchDept && matchQuery) ? 'grid' : 'none';
+      if (matchDept && matchQuery) {
+        row.style.display = 'grid';
+        matchedDoctors++;
+        const slotsInRow = row.querySelectorAll('.time-slot-badge');
+        matchedSlots += slotsInRow.length;
+      } else {
+        row.style.display = 'none';
+      }
     });
+
+    if (doctorCountEl) doctorCountEl.textContent = matchedDoctors;
+    if (slotCountEl) slotCountEl.textContent = matchedSlots;
   }
 
   if (deptFilter) deptFilter.addEventListener('change', filterSchedule);
   if (searchInput) searchInput.addEventListener('input', filterSchedule);
+
+  if (resetBtn) {
+    resetBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      if (deptFilter) deptFilter.value = '';
+      filterSchedule();
+    });
+  }
+
+  filterSchedule();
 }
 
 /* ==========================================================================
