@@ -59,9 +59,12 @@
       </nav>
 
       <div class="header-actions">
-        <button type="button" class="btn-search-trigger trigger-search">
+        <button type="button" class="btn-search-trigger trigger-search" aria-label="Open Search">
           <span>Search</span>
-          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="7" cy="7" r="5"/><path d="M11 11L15 15"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
         </button>
         <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="btn-appointment">Appointment</a>
         <button type="button" class="btn-mobile-toggle" aria-label="Open Menu"><span></span><span></span><span></span></button>
@@ -518,30 +521,7 @@
     </div>
   </footer>
 
-  <!-- ========================================================================
-       MOBILE FLOATING BOTTOM BAR
-       ======================================================================== -->
-  <aside class="mobile-bottom-bar" aria-label="Mobile Navigation Controls">
-    <div class="mobile-bottom-grid">
-      <button type="button" class="mobile-bottom-btn" id="bottomMenuTrigger">
-        <svg width="16" height="6" fill="currentColor">
-          <path d="M0 1h16M0 5h16" stroke="currentColor" stroke-width="1.8"/>
-        </svg>
-        <span>MENU</span>
-      </button>
 
-      <button type="button" class="mobile-bottom-btn trigger-search" title="Search">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-          <circle cx="11" cy="11" r="8"/>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
-        </svg>
-      </button>
-
-      <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="mobile-bottom-btn" style="background-color:var(--color-primary); color:#fff;">
-        <span>APPOINTMENT</span>
-      </a>
-    </div>
-  </aside>
 
   <!-- ========================================================================
        MOBILE OFF-CANVAS DRAWER MENU
@@ -568,6 +548,12 @@
           <li><a href="our-services.html" class="mobile-nav-link">Perawatan & Layanan</a></li>
           <li><a href="our-facilities.html" class="mobile-nav-link">Fasilitas & Kamar VIP</a></li>
           <li><a href="contact-us.html" class="mobile-nav-link">Kontak & Lokasi</a></li>
+          <li>
+            <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="mobile-nav-link mobile-nav-appointment">
+              <span>Appointment</span>
+              <span class="mobile-nav-appointment-badge">Book Now</span>
+            </a>
+          </li>
         </ul>
 
         <div class="mobile-contact-block">
@@ -596,8 +582,8 @@
           </div>
         </div>
 
-        <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="btn-appointment" style="width:100%; margin-top:1.5rem; padding:0.9rem; text-align:center;">
-          Book Dental Appointment
+        <a href="https://wa.me/628111399119?text=Halo%20CLAUDIA%20Dental%20Sanctuary,%20saya%20ingin%20membuat%20janji%20temu%20dokter%20gigi" target="_blank" rel="noopener noreferrer" class="mobile-drawer-btn-appointment">
+          Buat Janji Temu (Appointment)
         </a>
       </div>
     </div>

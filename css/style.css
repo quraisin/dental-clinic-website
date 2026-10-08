@@ -327,7 +327,7 @@ button {
 }
 
 .btn-search-trigger {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 0.6rem;
   background-color: var(--color-pastel-pill);
@@ -338,6 +338,8 @@ button {
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  border: 1px solid rgba(24, 59, 43, 0.08);
+  cursor: pointer;
   transition: all var(--transition-fast);
 }
 
@@ -425,14 +427,7 @@ button {
    Mobile Bottom Floating Navigation (Signature JWCC Experience)
    ========================================================================== */
 .mobile-bottom-bar {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 95;
-  background: linear-gradient(180deg, rgba(250, 248, 245, 0) 0%, rgba(250, 248, 245, 0.96) 25%, #FAF8F5 100%);
-  padding: 1rem 1.25rem 1.5rem;
+  display: none !important;
 }
 
 .mobile-bottom-grid {
@@ -611,6 +606,48 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.mobile-nav-link.mobile-nav-appointment {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.mobile-nav-appointment-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-pastel-pill);
+  color: var(--color-primary);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+}
+
+.mobile-drawer-btn-appointment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.95rem 1.5rem;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(24, 59, 43, 0.25);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.mobile-drawer-btn-appointment:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(24, 59, 43, 0.35);
 }
 
 /* ==========================================================================
@@ -2353,17 +2390,34 @@ button {
     display: none;
   }
 
+  .header-actions {
+    gap: 0.6rem;
+  }
+
+  .btn-search-trigger {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    border: 1px solid rgba(24, 59, 43, 0.1);
+  }
+
+  .btn-search-trigger span {
+    display: none;
+  }
+
+  .btn-search-trigger svg {
+    width: 18px;
+    height: 18px;
+  }
+
   .btn-mobile-toggle {
     display: flex;
   }
 
   .mobile-bottom-bar {
-    display: block;
-  }
-
-  body {
-    padding-bottom: 80px;
-    /* Space for mobile floating bottom bar */
+    display: none !important;
   }
 
   .philosophy-grid {
